@@ -64,3 +64,13 @@ To compile the contracts run inside the `truffle develop` console:
 ```source
 truffle(develop)> migrate
 ```
+
+## Add unit tests
+
+We will use the `chai` assertion library to write unit tests.
+
+```source
+npm install --save chai chai-bn chai-as-promised
+```
+
+Configure the unit tests using chai as explained in comments in `test/BFDToken.test.js`.
