@@ -30,3 +30,37 @@ I am using a distro based on Ubuntu 20.04 For some reason for me was a pain to i
 ```source
 truffle unbox react
 ```
+
+Now let's save the openzeppelin-solidity project in our project folder.
+
+```source
+npm install --save @openzeppelin/contracts@v3.0.0
+```
+
+>We will use version `3.0.0.` because is the version that we are using in the [Ethereum Blockchain Developer Bootcamp With Solidity (2021)](https://www.udemy.com/course/blockchain-developer).
+
+Note2:
+
+I ended up using `npm install @openzeppelin/contracts` as sugested in the oppenzepelin repo.
+
+## Rapid testing
+
+Typing in the console `truffle develop` creates a development environment that allows you to interact with the blockchain.
+
+If you get an `Error: error:0308010C:digital envelope routines::unsupported` execute the following command as a workaround:
+
+```source
+export NODE_OPTIONS=--openssl-legacy-provider
+```
+
+Then run again `truffle develop` and it should work.
+
+### Compiling
+
+Make sure `truffle-config.js` is using the correct version of the compiler.
+
+To compile the contracts run inside the `truffle develop` console:
+
+```source
+truffle(develop)> migrate
+```
